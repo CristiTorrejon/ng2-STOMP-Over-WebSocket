@@ -3,7 +3,7 @@
     "name": "Lasha Sulaberidze"
   },
   "bugs": {
-    "url": "https://github.com/devsullo/ng2-STOMP-Over-WebSocket/issues"
+    "url": "https://github.com/CristiTorrejon/ng2-STOMP-Over-WebSocket/issues"
   },
   "dependencies": {},
   "description": "STOMP Over WebSocket service for angular2",
@@ -14,7 +14,7 @@
     "tarball": "https://registry.npmjs.org/ng2-stomp-service/-/ng2-stomp-service-1.0.5.tgz"
   },
   "gitHead": "eb0f3d556c792c4686dc8a5b218072e92d5f4ed6",
-  "homepage": "https://github.com/devsullo/ng2-STOMP-Over-WebSocket#readme",
+  "homepage": "https://github.com/CristiTorrejon/ng2-STOMP-Over-WebSocket#readme",
   "keywords": [
     "stomp",
     "websockets",
@@ -39,7 +39,7 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devsullo/ng2-STOMP-Over-WebSocket.git"
+    "url": "git+https://github.com/CristiTorrejon/ng2-STOMP-Over-WebSocket.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
