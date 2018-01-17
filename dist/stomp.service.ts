@@ -80,9 +80,7 @@ export class StompService {
 
 		//Debuging connection
 		if(this.config.debug){
-			this.stomp.debug = function(str) {
-			  console.log(str);
-			};
+			this.stomp.debug = function(str) {};
 		}else{
 			this.stomp.debug = false;
 		}
@@ -118,9 +116,7 @@ export class StompService {
 	    if(this.config.debug){
 	    	console.log('Reconnecting...');
 	    }
-	    this.timer = setTimeout(() => {
-	     	this.startConnect();
-	    }, this.config.recTimeout || 5000);
+	    this.startConnect();
 	  }
 	}
 
@@ -130,7 +126,7 @@ export class StompService {
 	public subscribe(destination:string, callback:any, headers?:Object){
 		headers = headers || {};
 		return this.stomp.subscribe(destination, function(response){
-			let message = JSON.parse(response.body);
+			let message = response.body;
 			let headers = response.headers;
 			callback(message,headers);
 		},headers);

@@ -33,9 +33,7 @@ var StompService = (function () {
                 if (_this.config.debug) {
                     console.log('Reconnecting...');
                 }
-                _this.timer = setTimeout(function () {
-                    _this.startConnect();
-                }, _this.config.recTimeout || 5000);
+                 _this.startConnect();
             }
         };
         this.status = 'CLOSED';
@@ -64,9 +62,7 @@ var StompService = (function () {
         this.stomp.heartbeat.incoming = this.config.heartbeatIn || 10000;
         //Debuging connection
         if (this.config.debug) {
-            this.stomp.debug = function (str) {
-                console.log(str);
-            };
+            this.stomp.debug = function (str) { };
         }
         else {
             this.stomp.debug = false;
@@ -81,7 +77,7 @@ var StompService = (function () {
     StompService.prototype.subscribe = function (destination, callback, headers) {
         headers = headers || {};
         return this.stomp.subscribe(destination, function (response) {
-            var message = JSON.parse(response.body);
+            var message = response.body;
             var headers = response.headers;
             callback(message, headers);
         }, headers);
